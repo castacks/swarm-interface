@@ -2,7 +2,7 @@
 
 A ROS 2-based multi-agent swarm interface built on top of PX4, designed for coordinated control of multiple UAVs in simulation.  
 
-> ⚠️ **Note:** This implementation is currently tailored for simulation (Pegasus simulator) and assumes network-based communication among agents. Minor modifications are required for real-world deployment.
+> **Note:** This implementation is currently tailored for simulation (Pegasus simulator) and assumes network-based communication among agents. Minor modifications are required for real-world deployment.
 
 ---
 
