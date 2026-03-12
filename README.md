@@ -49,15 +49,15 @@ Velocity Command
 ### Steps to Reproduce
 
 1. **Set up Isaac Sim and PX4**
-   - Follow the setup guide: [[link](https://pegasussimulator.github.io/PegasusSimulator/source/setup/installation.html)]
+   - Follow the setup guide: [link]
 
 2. **Place simulation script**
    - Copy `multi_vehicle_sim.py` into the Pegasus Simulator repository at the appropriate location.
 
 3. **Clone this repository**
    ```bash
-   git clone https://github.com/castacks/swarm-interface.git
-   cd swarm-interface/ros_ws
+   git clone <repo-url>
+   cd <repo-dir>
    ```
 
 4. **Build the workspace**
@@ -70,7 +70,15 @@ Velocity Command
    source install/setup.bash
    ```
 
-6. **Launch per-vehicle nodes**
+6. **Launch the simulation**
+   ```bash
+   isaac_run examples/multi_vehicle_sim.py
+   ```
+   > By default, the simulation runs in **headless mode** for **3 vehicles**. To change this, modify **line 16** (headless flag) and **line 60** (number of vehicles) accordingly.
+
+   Once launched, you should be able to see the simulation running. You can now proceed to run the interface and guidance stack.
+
+7. **Launch per-vehicle nodes**
    - Single vehicle communication depends on `interface.py` and `guidance.py`.
    - Run the following in separate terminals for each vehicle (replace `vehicle_id` accordingly):
 
@@ -82,9 +90,9 @@ Velocity Command
    ros2 run swarm_guidance guidance --ros-args -p vehicle_id:=1 -p total_vehicles:=3
    ```
 
-7. **Repeat step 6 for each of the `n` vehicles**, incrementing `vehicle_id` for each agent.
+8. **Repeat step 7 for each of the `n` vehicles**, incrementing `vehicle_id` for each agent.
 
-8. **Modify leader velocity and leader vehicle ID** using the following publisher commands:
+9. **Modify leader velocity and leader vehicle ID** using the following publisher commands:
 
    ```bash
    # Change leader velocity
@@ -94,4 +102,4 @@ Velocity Command
    ros2 topic pub -1 /swarm/change_leader std_msgs/msg/String "{data: 2}"
    ```
 
-9. **Open QGroundControl (QGC)** to view telemetry data.
+10. **Open QGroundControl (QGC)** to view telemetry data.
