@@ -52,7 +52,7 @@ Velocity Command
    - Follow the setup guide: [[link](https://pegasussimulator.github.io/PegasusSimulator/source/setup/installation.html)]
 
 2. **Place simulation script**
-   - Copy `multi_vehicle_px4.py` into the Pegasus Simulator repository at the appropriate location.
+   - Copy `multi_vehicle_px4.py` into the Pegasus Simulator repository inside the examples dir.
 
 3. **Clone this repository**
    ```bash
