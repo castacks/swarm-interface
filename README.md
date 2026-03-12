@@ -49,15 +49,15 @@ Velocity Command
 ### Steps to Reproduce
 
 1. **Set up Isaac Sim and PX4**
-   - Follow the setup guide: [link]
+   - Follow the setup guide: [[link](https://pegasussimulator.github.io/PegasusSimulator/source/setup/installation.html)]
 
 2. **Place simulation script**
    - Copy `multi_vehicle_sim.py` into the Pegasus Simulator repository at the appropriate location.
 
 3. **Clone this repository**
    ```bash
-   git clone <repo-url>
-   cd <repo-dir>
+   git clone [<repo-url>](https://github.com/castacks/swarm-interface.git)
+   cd swarm-interface/ros_ws
    ```
 
 4. **Build the workspace**
