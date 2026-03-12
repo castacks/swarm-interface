@@ -56,7 +56,7 @@ Velocity Command
 
 3. **Clone this repository**
    ```bash
-   git clone [<repo-url>](https://github.com/castacks/swarm-interface.git)
+   git clone https://github.com/castacks/swarm-interface.git
    cd swarm-interface/ros_ws
    ```
 
